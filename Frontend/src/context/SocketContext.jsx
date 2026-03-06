@@ -29,8 +29,7 @@ export const SocketProvider = ({ children }) => {
     }
 
     // Initialize socket connection
-    // Remove '/api' from the URL for socket connection
-    const apiURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+   const apiURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
     const socketURL = apiURL.replace('/api', '');
     const newSocket = io(socketURL, {
       withCredentials: true,
