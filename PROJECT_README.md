@@ -425,3 +425,17 @@ VITE_API_URL=http://localhost:5000
    - Detailed logging server-side
 
 ---
+
+## API Documentation (Swagger/Postman)
+
+- Complete REST endpoint documentation is available in **API_DOCUMENTATION.md**
+- The documented request/response samples can be directly mapped into a Postman collection
+- Endpoint grouping follows standard Swagger-style sections: Authentication, Gigs, Bids, WebSocket Events, and Error Responses
+
+---
+
+## Scalability Note
+
+GigFlow is currently designed as a monolithic MERN application suitable for assignment/demo scale. For production growth, it can be extended with Redis caching, horizontal scaling behind a load balancer, read replicas for MongoDB, and progressive service decomposition into microservices.
+
+---

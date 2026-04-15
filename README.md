@@ -105,7 +105,7 @@ npm run dev
 - CRUD APIs for Gigs & Bids
 - Error handling & validation
 - MongoDB database schema
-- API documentation
+- API documentation (Swagger/Postman collection compatible)
 
 **Frontend:**
 - React.js application
@@ -140,9 +140,49 @@ npm run dev
 
 ---
 
+## How It Works (Evaluator Demo Flow)
+
+Use two browser sessions (or one normal + one incognito) to test both roles.
+
+### Step 1: Create Two Accounts
+1. Register a **Client** account
+2. Register a **Freelancer** account
+
+### Step 2: Client Creates Gig
+1. Login as Client
+2. Open Dashboard
+3. Create a new gig with title, description, and budget
+4. Verify gig appears in gigs listing
+
+### Step 3: Freelancer Submits Bid
+1. Login as Freelancer
+2. Browse available gigs
+3. Open the gig detail page
+4. Submit a bid with amount and proposal
+
+### Step 4: Client Reviews and Hires
+1. Switch back to Client session
+2. Open created gig and view bids
+3. Click hire action on a freelancer bid
+4. Confirm gig/bid status update
+
+### Step 5: Verify Real-Time Notification
+1. Keep Freelancer session active
+2. Perform hire action from Client session
+3. Confirm Freelancer receives instant Socket.io notification
+
+### Expected Result
+- Auth flow works for both roles
+- Role-based permissions are enforced
+- Gigs and bids persist in MongoDB
+- Hiring updates status correctly
+- Real-time events are delivered successfully
+
+---
+
 ## Documentation
 
-- **[API_DOCUMENTATION.md](./API_DOCUMENTATION.md)** - API endpoints reference
+- **[API_DOCUMENTATION.md](./API_DOCUMENTATION.md)** - API endpoints reference (Swagger/Postman-ready format)
 - **[PROJECT_README.md](./PROJECT_README.md)** - Detailed setup guide
 
 ---
